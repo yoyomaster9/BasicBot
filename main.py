@@ -26,4 +26,8 @@ async def on_ready():
     for g in bot.guilds:
         print('Logged into {}'.format(g))
 
+@bot.command()
+async def ping(ctx):
+    await ctx.send('Pong!')
+
 bot.run(config.DiscordToken)
